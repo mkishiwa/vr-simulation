@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vestibular Conflict VR Demo</title>
+  <style>
+    body { margin: 0; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
+    canvas { display: block; }
+
+    #welcomeScreen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #004d66, #009999);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #welcomeScreen h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    #welcomeScreen p {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      max-width: 600px;
+    }
+
+    #enterButton {
+      padding: 12px 30px;
+      font-size: 18px;
+      background-color: #00cc99;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #enterButton:hover {
+      background-color: #009977;
+    }
+
+    #controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      display: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-right: 10px;
+      background-color: #00cc99;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #stopButton {
+      background-color: #cc3300;
+    }
+
+    #modeToggle {
+      background-color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Welcome screen -->
+  <div id="welcomeScreen">
+    <h1>Vestibular Conflict in Virtual Reality</h1>
+    <p>This demo simulates how visual and balance systems can become mismatched in VR, causing disorientation. Click below to begin.</p>
+    <button id="enterButton">Enter Simulation</button>
+    <p style="margin-top: 2rem; font-size: 0.9em;">By Michael Kishiwa</p>
+  </div>
+
+  <!-- Simulation controls -->
+  <div id="controls">
+    <button id="startButton">Start Simulation</button>
+    <button id="stopButton" style="display:none;">End Simulation</button>
+    <button id="modeToggle" title="Toggle between Moving and Static Tunnel">Toggle Mode: Moving</button>
+  </div>
+
+  <!-- Three.js scene -->
+  <script src="three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
