@@ -12,4 +12,3 @@ HOW TO USE:
 FILES:
 - index.html: The main webpage.
 - main.js: JavaScript that makes the tunnel move.
-- three.min.js: Placeholder — please download from https://threejs.org/build/three.min.js
